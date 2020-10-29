@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Notes</title>
+    <link href="./res/css/style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html" class="active">HTML 101</a></li>                
+                <!-- <li><a href="./index.html" class="active">HTML 101</a></li> -->
+                <li><a href="./tables.html">Tables</a></li>
+                <li><a href="./forms.html">Forms</a></li>
+                <li><a href="./semantics.html">Semantics</a></li>
+                <li><a href="./cssNotes.html">CSS Notes</a></li>
+                <li id="search"><input type="text" placeholder="Search.." id="search-bar"></li>
+            </ul>
+        </nav>
+
+        <div class="banner">
+            <h1>HTML 101</h1>
+            <p>HTML (HyperText Markup Language) is used to give content to a web page and instructs web browsers on how to
+                structure that content.</p>
+            <p>The document type declaration &lt;!DOCTYPE html&gt; is required as the first line of an HTML document. The
+                doctype declaration is an instruction to the browser about what type of document to expect and which version
+                of HTML is being used, in this case it’s HTML5.</p>
+        </div>
+    </header>
+
+    <main>        
+        <div class="definitions">
+            <div class="terms">
+                <h2 class="heading">Common Terms</h2>
+                <ul>
+                    <li><span class="term">HTML element</span>: a piece of content in an HTML document and uses the following syntax: opening tag +
+                        content + closing tag.</li>
+                    <li><span class="term">HTML (opening) tag</span>: The syntax for a single HTML tag is an opening angle bracket &lt; followed by the
+                        element name and a closing angle bracket &gt;.</li>
+                    <li><span class="term">element contnet</span>: The content of an HTML element is the information between the opening and closing tags
+                        of an element.</li>
+                    <li><span class="term">closing tag</span>: used to denote the end of an HTML element. The syntax for a closing tag is a left angle
+                        bracket &lt; followed by a forward slash / then the element name and a right angle bracket to close
+                        &gt;.</li>
+                    <li><span class="term">HTML attributes</span>: values added to the opening tag of an element to configure the element or change the
+                        element’s default behavior. (syntax: name="value")</li>
+                    <li><span class="term">ID attributes</span>: specific and unique id attributes can be assigned to different elements in order to
+                        differentiate between them.<br>When needed, the id value can be called upon by CSS and JavaScript to
+                        manipulate, format, and perform specific instructions on that element and that element only. Valid id
+                        attributes should begin with a letter and should only contain letters (a-Z), digits (0-9), hyphens (-),
+                        underscores (_), and periods (.).</li>
+                </ul>
+            </div>
+    
+            <div class="elements">
+                <h2 class="heading">Common Elements</h2>  
+                <h3 class="heading">Basics</h3>      
+                <ul>
+                    <li><span class="term">&lt;h1&gt;-&lt;h6&gt; heading element</span>: HTML can use six different levels of heading elements. The
+                        heading elements are ordered from the highest level &lt;h1&gt; to the lowest level &lt;h6&gt;.</li>
+                    <li><span class="term">&lt;p&gt; paragraph element</span>: contains and displays a block of text.</li>
+                    <li><span class="term">&lt;em&gt; emphasis element</span>: emphasizes text and browsers will usually <em>italicize</em> the emphasized
+                        text by default.</li>
+                    <li><span class="term">&lt;strong&gt; strong element</span>: highlights important, serious, or urgent text and browsers will normally
+                        render this highlighted text in <strong>bold</strong> by default.</li>
+                    <li><span class="term">&lt;div&gt; div element</span>: used as a container that divides an HTML document into sections and is short
+                        for “division”; can contain flow content such as headings, paragraphs, links, images, etc.</li>
+                    <li><span class="term">&lt;span&gt; span element</span>: an inline container for text and can be used to group text for styling
+                        purposes; should be avoided if more semantic element is available</li>
+                    <li><span class="term">&lt;br&gt; break element</span>: will create a line break in text and is especially useful where a division of
+                        text is required, like in a postal address. The line break element requires only an opening tag and must
+                        not have a closing tag.</li>
+                    <li><span class="term">&lt;hr&gt; element</span>: adds a visible horizontal line</li>
+                </ul>
+                
+                <h3 class="heading">Structure</h3>
+                <ul>
+                    <li><span class="term">&lt;html&gt; HTML element</span>: the root of an HTML document, should be added after the !DOCTYPE declaration.
+                        All content/structure for an HTML document should be contained between the opening and closing tags.
+                    </li>
+                    <li><span class="term">&lt;head&gt; head element</span>: contains general information about an HTML page that isn’t displayed on the
+                        page itself. This information is called metadata and includes things like the title of the HTML document
+                        and links to stylesheets.</li>
+                    <li><span class="term">&lt;title&gt; title element</span>: contains a text that defines the title of an HTML document. The title is
+                        displayed in the browser’s title bar or tab in which the HTML page is displayed; can only be contained
+                        inside a document’s &lt;head&gt; element.</li>
+                    <li><span class="term">&lt;body&gt; body element</span>: represents the content of an HTML document. Content inside are rendered on
+                        the web browsers.</li>
+                </ul>
+        
+                <h3 class="heading">Lists</h3>
+                <ul>
+                    <li><span class="term">&lt;ul&gt; unordered list element</span>: used to create a list of items in no particular order. Each
+                        individual list item will have a bullet point by default.</li>
+                    <li><span class="term">&lt;ol&gt; ordered list element</span>: creates a list of items in sequential order. Each list item appears
+                        numbered by default.</li>
+                    <li><span class="term">&lt;li&gt; list item element</span>: creates an individual list item.</li>
+                </ul>
+        
+                <h3 class="heading">Media</h3>
+                <ul>
+                    <li><span class="term">&lt;img&gt; image element</span>: embeds images in documents. The src attribute contains the image URL and is
+                        mandatory; is an empty element meaning it should not have a closing tag.</li>
+                    <li><span class="term">alt attribute</span>: An &lt;img&gt; element can have alternative text via the alt attribute. The alternative
+                        text will be displayed if an image fails to render due to an incorrect URL, if the image format is not
+                        supported by the browser, if the image is blocked from being displayed, or if the image has not been
+                        received from the URL.<br>
+                        The text will be read aloud if screen reading software is used and helps support visually impaired users
+                        by providing a text descriptor for the image content on a webpage.</li>
+                    <li><span class="term">&lt;video&gt; video element</span>: embeds a media player for video playback. The src attribute will contain
+                        the URL to the video. Adding the controls attribute will display video controls in the media player.<br>
+                        Note: The content inside the opening and closing tag is shown as a fallback in browsers that don’t
+                        support the element.</li>
+                </ul>
+        
+                <h3 class="heading">Links</h3>
+                <ul>
+                    <li><span class="term">&lt;a&gt; anchor element</span>: used to create hyperlinks in an HTML document. The hyperlinks can point to
+                        other
+                        webpages, files on the same server, a location on the same page, or any other URL via the hyperlink
+                        reference
+                        attribute, href. The href determines the location the anchor element points to.</li>
+                    <li><span class="term">target attribute</span>: specifies where a hyperlink should be opened. A target value of "_blank" will tell the
+                        browser
+                        to open the hyperlink in a new tab in modern browsers, or in a new window in older browsers or if the
+                        browser
+                        has had settings changed to open hyperlinks in a new window.</li>
+                    <li><span class="term">file path</span>: URL paths in HTML can be absolute paths, like a full URL, or a relative file path that links
+                        to a
+                        local file in the same folder or on the same server, for example: ./style.css. Relative file paths begin
+                        with ./
+                        followed by a path to the local file. ./ tells the browser to look for the file path from the current
+                        folder.
+                    </li>
+                    <li><span class="term">Link to a Different Part of the Page #</span>: The anchor element &lt;a&gt; can create hyperlinks to different
+                        parts of
+                        the same HTML document using the href attribute to point to the desired location with '#' followed by
+                        the id of
+                        the element to link to.</li>
+                </ul>
+
+                <h3 class="heading">Comments</h3>
+                <ul>
+                <li>In HTML, comments can be added between an opening &lt;!-- and closing --&gt;. Content inside of comments will
+                    not be rendered by browsers, and are usually used to describe a part of code or provide other details.<br>
+                    Comments can span single or multiple lines.</li>
+                </ul>
+            </div>
+        </div>
+
+        
+    </main>
+
+    <footer>
+        <hr>
+        <div class="contact-info">
+            <p>Contact Information</p>
+            <p>phone number: (340) 690-3768</p>
+            <p>email: acgraham02@gmail.com</p>
+        </div>
+    </footer>
+</body>
+
+</html>
